@@ -37,7 +37,7 @@ export class GoogleSheetsService {
       // First, verify the sheet exists and we have access
       const sheetExists = await this.verifySheetAccess(
         spreadsheetId,
-        sheetName
+        sheetName,
       );
       if (!sheetExists) {
         console.error(
@@ -115,7 +115,7 @@ export class GoogleSheetsService {
 
   private async verifySheetAccess(
     spreadsheetId: string,
-    sheetName: string
+    sheetName: string,
   ): Promise<boolean> {
     try {
       // Try to get basic sheet info first
